@@ -13,8 +13,6 @@ const getMetaTags = async () => {
   console.log(data.preview);
   meta.value = data.preview.meta;
 };
-
-console.log("ss", meta.value);
 </script>
 
 <template>

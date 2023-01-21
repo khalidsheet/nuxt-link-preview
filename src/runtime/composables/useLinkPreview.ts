@@ -1,5 +1,4 @@
-import { LinkPreview } from "./../runtime/types";
-import { useNuxtApp } from "#app";
+import { LinkPreview } from "../types";
 
 /**
  * useLinkPreview
