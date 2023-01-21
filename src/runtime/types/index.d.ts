@@ -2,6 +2,7 @@ export type LinkPreview = {
   url: string;
   image: string;
   title: string;
+  description: string;
   meta: Meta[];
 };
 
