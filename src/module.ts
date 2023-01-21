@@ -7,7 +7,7 @@ export interface ModuleOptions {
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: "link-preview",
+    name: "nuxt-link-preview",
     configKey: "linkPreview",
     compatibility: {
       nuxt: "^3.0.0",

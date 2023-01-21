@@ -1,5 +1,5 @@
 {
-  "name": "link-preview",
+  "name": "nuxt-link-preview",
   "description": "Link preview module for Nuxt.js",
   "version": "0.1.0",
   "license": "MIT",
