@@ -8,7 +8,11 @@ import { useNuxtApp } from "#app";
  * @throws Error
  */
 export default async function (url: string): Promise<Partial<LinkPreview>> {
-  const request = await $fetch(url);
+  const request = await $fetch(url, {
+    headers: {
+      "Access-Control-Allow-Origin": "*",
+    },
+  });
   const html = (request as string).replaceAll("\\", "");
   const { metaTagsContent, others } = extractMetaTag(html);
 
