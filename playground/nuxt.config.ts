@@ -1,4 +1,5 @@
+import NuxtLinkPreview from "..";
+
 export default defineNuxtConfig({
-  modules: ["nuxt-link-preview"],
-  linkPreview: {},
+  modules: [NuxtLinkPreview],
 });

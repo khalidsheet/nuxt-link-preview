@@ -1,5 +1,10 @@
 import { fileURLToPath } from "url";
-import { defineNuxtModule, addPlugin, createResolver } from "@nuxt/kit";
+import {
+  defineNuxtModule,
+  addPlugin,
+  createResolver,
+  addImportsDir,
+} from "@nuxt/kit";
 
 export interface ModuleOptions {
   addPlugin: boolean;
@@ -23,8 +28,14 @@ export default defineNuxtModule<ModuleOptions>({
       const runtimeDir = fileURLToPath(new URL("./runtime", import.meta.url));
       nuxt.options.build.transpile.push(runtimeDir);
 
+      addPlugin({
+        src: resolve(runtimeDir, "plugin"),
+        mode: "server",
+      });
+
       nuxt.hook("imports:dirs", (dirs) => {
-        dirs.push(resolve(__dirname, "composables"));
+        dirs.push(resolve(runtimeDir, "composables"));
+        dirs.push(resolve(runtimeDir, "types"));
       });
     }
   },

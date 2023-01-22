@@ -6,13 +6,11 @@ import { LinkPreview } from "../types";
  * @returns Promise<Partial<LinkPreview>>
  * @throws Error
  */
-export default async function (url: string): Promise<Partial<LinkPreview>> {
-  const request = await $fetch(url, {
-    headers: {
-      "Access-Control-Allow-Origin": "*",
-    },
-  });
-  const html = (request as string).replaceAll("\\", "");
+export async function useLinkPreview(
+  url: string
+): Promise<Partial<LinkPreview>> {
+  const request = await $fetch(url);
+  const html = request as string;
   const { metaTagsContent, others } = extractMetaTag(html);
 
   return {

@@ -1,11 +1,14 @@
 {
   "name": "nuxt-link-preview",
   "description": "Link preview module for Nuxt.js",
-  "version": "0.1.2",
+  "version": "0.1.4",
   "license": "MIT",
   "author": {
     "name": "Khalid M. Sheet",
     "email": "khalid.m.sheet@gmail.com"
+  },
+  "repository": {
+    "url": "https://github.com/khalidsheet/nuxt-link-preview"
   },
   "type": "module",
   "exports": {
